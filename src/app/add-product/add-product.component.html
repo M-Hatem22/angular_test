@@ -1,0 +1,22 @@
+<!-- <div class="container"> -->
+    <div class="row">
+        <div class="col-xs-12 m-t-8">
+            <div class="row" style="height: 40px;"></div>
+            <!-- <p>add product</p> -->
+            <label>product Name :</label>
+            <input type="text" class="form-control" [(ngModel)]="name"   #productName >
+            <label for="">product price : </label>
+            <input type="number" class="form-control" [(ngModel)]="price" >
+            <label for="">Product description</label>
+            <input type="text" class="form-control" [(ngModel)]="description" #productDescription>
+            <div class="d-flex justify-content-between mb-2 mt-1">
+                <div class="d-flex">
+                    <input type="file" disabled="true" class="file-upload" onchange="console.log(event.target.files)">
+                    <em for="">(function not available yet..)</em>
+                </div>
+
+                <button class="btn btn-primary " (click)="productCreated(productName)">Add Product!</button>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->

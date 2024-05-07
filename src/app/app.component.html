@@ -1,0 +1,21 @@
+<app-header class="text-center fixed-top "> </app-header>
+
+<div class="container">
+  <app-add-product (productemitter)="letsAddElemnt($event)"> 
+
+  </app-add-product>
+ 
+  <div class="row">
+    <hr />
+    <h3>Products</h3>
+    <app-products
+      class="col-4 mb-4"
+      *ngFor="let item of elements"
+      [Product]="item"
+    >
+    
+  </app-products>
+</div>
+</div>
+
+<app-footer class="text-center  bg-body-tertiary text-muted fixed-bottom"> </app-footer>
